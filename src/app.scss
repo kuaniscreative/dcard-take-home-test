@@ -1,0 +1,5 @@
+@use "@@ui/theme/typography";
+
+body {
+  font-family: typography.$font-family;
+}
