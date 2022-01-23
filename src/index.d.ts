@@ -4,3 +4,9 @@ declare module '*.scss' {
   };
   export default classes;
 }
+
+interface QueryResult<T> {
+  data: T | null,
+  loading: boolean,
+  isDataReachEnd: boolean,
+}
