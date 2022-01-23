@@ -10,5 +10,13 @@ module.exports = createConfig({
     port: 5050,
     hot: true,
     historyApiFallback: true,
+    proxy: {
+      '/api': {
+        target: 'https://www.dcard.tw/v2',
+        secure: false,
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' },
+      }
+    }
   },
 });
