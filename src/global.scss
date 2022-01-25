@@ -1,4 +1,12 @@
 @use "@@ui/theme/typography";
+@use "@@ui/theme/palette";
+
+html,
+body {
+  height: 100%;
+  background-color: palette.$brand-dark;
+  overflow: auto;
+}
 
 body {
   font-family: typography.$font-family;
