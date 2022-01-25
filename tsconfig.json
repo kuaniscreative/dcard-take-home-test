@@ -17,6 +17,7 @@
     "paths": {
       "@@core/*": ["src/core/*"],
       "@@ui/*": ["src/ui/*"],
+      "@@domains/*": ["src/domains/*"],
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

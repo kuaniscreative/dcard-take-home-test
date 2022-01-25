@@ -128,6 +128,7 @@ const commonConfig = {
     alias: {
       '@@core': path.resolve(SRC_PATH, 'core'),
       '@@ui': path.resolve(SRC_PATH, 'ui'),
+      '@@domains': path.resolve(SRC_PATH, 'domains'),
     },
   },
 };
