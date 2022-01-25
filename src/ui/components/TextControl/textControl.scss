@@ -1,0 +1,58 @@
+@use "@@ui/theme/typography";
+@use "@@ui/theme/palette";
+
+$colorVariants: palette.$semanticTextColors;
+
+@mixin typography-align {
+  @each $align in left, center, right {
+    .#{$align} {
+      text-align: $align;
+    }
+  }
+}
+
+@mixin typography-color {
+  .inherit {
+    color: inherit;
+  }
+
+  @each $name, $value in $colorVariants {
+    .#{$name} {
+      color: $value;
+    }
+  }
+}
+
+@mixin typography-size {
+  @each $name, $size in typography.$sizes {
+    .#{$name} {
+      @include typography.size($name);
+    }
+  }
+}
+
+.root {
+  margin: 0;
+  padding: 0;
+
+  @include typography.weight(regular);
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+@include typography.map-weight-to-classes;
+@include typography-align;
+@include typography-color;
+@include typography-size;
