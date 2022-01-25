@@ -129,6 +129,7 @@ const commonConfig = {
       '@@core': path.resolve(SRC_PATH, 'core'),
       '@@ui': path.resolve(SRC_PATH, 'ui'),
       '@@domains': path.resolve(SRC_PATH, 'domains'),
+      '@@icons': path.resolve(SRC_PATH, 'icons'),
     },
   },
 };

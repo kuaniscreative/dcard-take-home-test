@@ -18,6 +18,7 @@
       "@@core/*": ["src/core/*"],
       "@@ui/*": ["src/ui/*"],
       "@@domains/*": ["src/domains/*"],
+      "@@icons/*": ["src/icons/*"],
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],
