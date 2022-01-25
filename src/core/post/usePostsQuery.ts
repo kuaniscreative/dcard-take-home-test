@@ -35,7 +35,7 @@ function usePostsQuery() {
 
       setQueryResult(prevResult => ({
         ...prevResult,
-        isLoading: true,
+        loading: true,
       }));
 
       getPosts({
@@ -62,12 +62,13 @@ function usePostsQuery() {
     }
   }, [queryResult.isDataReachEnd]);
 
-  function fetchMore(params?: GetPostsParams) {
+  const fetchMore = useCallback((params?: GetPostsParams) => {
     fetch({
       ...params,
       cursor: params?.cursor ?? cursor.current,
     });
-  }
+  }, [fetch]);
+
   
   useEffect(() => {
     fetch();
@@ -75,7 +76,7 @@ function usePostsQuery() {
 
   return {
     posts: queryResult.data,
-    loding: queryResult.loading,
+    loading: queryResult.loading,
     isDataReachEnd: queryResult.isDataReachEnd,
     fetchMore,
   };  
