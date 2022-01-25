@@ -1,0 +1,11 @@
+@use "@@ui/theme/palette";
+
+.root {
+  width: 100%;
+  padding: 24px 16px;
+  border-bottom: 1px solid palette.$gray_5;
+}
+
+.title {
+  margin: 0 0 8px;
+}
