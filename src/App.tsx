@@ -1,6 +1,6 @@
 import { hot } from 'react-hot-loader/root';
 import 'modern-normalize';
-import './app.scss';
+import './global.scss';
 
 function App() {
   return (
