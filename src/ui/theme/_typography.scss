@@ -59,3 +59,11 @@ $weights: (
 
   @include nowrap;
 }
+
+@mixin map-weight-to-classes {
+  @each $name, $weight in $weights {
+    .#{$name} {
+      font-weight: $weight;
+    }
+  }
+}
