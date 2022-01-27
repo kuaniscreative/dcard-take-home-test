@@ -1,0 +1,18 @@
+.root {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 0;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 500ms infinite linear;
+}
